@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2025-01-24T19:13:57.735369" rpa="false" schemaversion="5">
+<suite id="s1" name="All Online Order Success" source="C:\robotframework_workshop\allonlineorder\all_online_order_success.robot">
+<test id="s1-t1" name="ลูกค้าสั่งซื้อสินค้าเลือกจัดส่งตามที่อยู่และชำระเงินด้วยบัตรเครดิต" line="9">
+<kw name="เปิดเว็บเบราว์เซอร์ และ เข้าเว็บ AllOnline">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:13:58.107214" level="INFO">Opening browser 'chrome' to base url 'https://www.allonline.7eleven.co.th'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-24T19:13:58.106211" elapsed="3.721945"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:01.829208" level="INFO">Clicking link 'xpath=//*[@id="page"]/header/div[4]/div/div/div/ul/li[4]/a'.</msg>
+<arg>xpath=//*[@id="page"]/header/div[4]/div/div/div/ul/li[4]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:01.828156" elapsed="0.960311"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:13:58.105210" elapsed="4.683257"/>
+</kw>
+<kw name="Login เข้าสู่ระบบสมาชิก">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:02.790491" level="INFO">Typing text 'vintage7093@gmail.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>vintage7093@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:02.789473" elapsed="0.209645"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:02.999118" level="INFO">Typing text 'Oldschool39!' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>Oldschool39!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:02.999118" elapsed="0.138599"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:03.137717" level="INFO">Clicking link 'xpath=//*[@id="__next"]/div/div/div[2]/div[2]/div/div/div/div[6]/a[1]'.</msg>
+<arg>xpath=//*[@id="__next"]/div/div/div[2]/div[2]/div/div/div/div[6]/a[1]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:03.137717" elapsed="0.139109"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:02.789473" elapsed="0.488419"/>
+</kw>
+<kw name="ค้นหาสินค้าด้วย คำค้นหา">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>อภิชัย ไพจิตร</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:03.278943" elapsed="5.611395"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:08.891617" level="INFO">Typing text 'โค๊ก' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>โค๊ก</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:08.890338" elapsed="1.556110"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:10.447597" level="INFO">Sending key(s) ('RETURN',) to page.</msg>
+<msg time="2025-01-24T19:14:10.447597" level="INFO">Pressing special key RETURN to browser.</msg>
+<msg time="2025-01-24T19:14:10.447597" level="INFO">Releasing special key RETURN.</msg>
+<arg>None</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-01-24T19:14:10.447597" elapsed="1.233289"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:03.277892" elapsed="8.403970"/>
+</kw>
+<kw name="ตรวจสอบผลการค้นหา">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>ผลการค้นหาสำหรับ</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:11.682887" elapsed="0.019391"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:11.681862" elapsed="0.020416"/>
+</kw>
+<kw name="เลือกดูสินค้า">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:11.704365" level="INFO">Executing JavaScript:
+document.querySelector('.alert-cookie-gdpr-allonline__content__1').style.display = 'none';
+Without any arguments.</msg>
+<arg>document.querySelector('.alert-cookie-gdpr-allonline__content__1').style.display = 'none';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-24T19:14:11.703325" elapsed="0.009321"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:11.712646" level="INFO">Clicking element 'xpath=//a[@title='โค้กไม่มีน้ำตาล 1.25ลิตร (แพ็ก 6 ขวด) - cocacola, 7Online']'.</msg>
+<arg>xpath=//a[@title='โค้กไม่มีน้ำตาล 1.25ลิตร (แพ็ก 6 ขวด) - cocacola, 7Online']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:11.712646" elapsed="0.970760"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:11.703325" elapsed="0.980081"/>
+</kw>
+<kw name="ตรวจสอบส่วนลดสินค้าและสถานะสินค้า">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>มีสินค้าในสต๊อก</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:12.684418" elapsed="0.027429"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>18</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:12.711847" elapsed="0.030079"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:12.684418" elapsed="0.057508"/>
+</kw>
+<kw name="เพิ่มจำนวนสินค้าและเพิ่มลงตะกร้า">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:12.742928" level="INFO">Executing JavaScript:
+document.querySelector('.alert-cookie-gdpr-allonline__content__1').style.display = 'none';
+Without any arguments.</msg>
+<arg>document.querySelector('.alert-cookie-gdpr-allonline__content__1').style.display = 'none';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-24T19:14:12.742928" elapsed="0.007019"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:12.750951" level="INFO">Typing text '1' into text field 'name=order_count'.</msg>
+<arg>name=order_count</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:12.750951" elapsed="0.104271"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:12.856226" level="INFO">Clicking element 'xpath=//*[@id="article-form"]/div[2]/div[2]/div[4]/div[1]/button'.</msg>
+<arg>xpath=//*[@id="article-form"]/div[2]/div[2]/div[4]/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:12.856226" elapsed="0.101265"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:12.741926" elapsed="0.215565"/>
+</kw>
+<kw name="ตรวจสอบรายระเอียดของสินค้าในตะกร้าและกดชำระสินค้า">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:12.959496" level="INFO">Clicking element 'xpath=//*[@id="mini-basket"]/a/i'.</msg>
+<arg>xpath=//*[@id="mini-basket"]/a/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:12.958493" elapsed="0.680783"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>โค้กไม่มีน้ำตาล 1.25ลิตร</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:13.640279" elapsed="0.158862"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-24T19:14:16.800574" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-24T19:14:13.799141" elapsed="3.001433"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:16.801609" level="INFO">Clicking link 'xpath=//*[@id="mini-basket-val"]/li[5]/a[2]'.</msg>
+<arg>xpath=//*[@id="mini-basket-val"]/li[5]/a[2]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:16.800574" elapsed="1.591919"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:12.958493" elapsed="5.434000"/>
+</kw>
+<kw name="เลือกวิธีการจัดส่งเป็นจัดส่งตามที่อยู่">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:18.393497" level="INFO">Clicking element 'xpath=//*[@id="address-tabs"]/ul/li[2]/a'.</msg>
+<arg>xpath=//*[@id="address-tabs"]/ul/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:18.393497" elapsed="0.121441"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:18.393497" elapsed="0.121441"/>
+</kw>
+<kw name="ใส่ที่อยู่จัดส่งสินค้า">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-24T19:14:21.516734" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-24T19:14:18.516371" elapsed="3.000363"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:21.517243" level="INFO">Clicking element 'xpath=//*[@id="addressbook"]/div[1]'.</msg>
+<arg>xpath=//*[@id="addressbook"]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:21.517243" elapsed="1.074158"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:continue-payment-btn</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-24T19:14:22.591401" elapsed="0.030248"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id:continue-payment-btn</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-01-24T19:14:22.622668" elapsed="0.026687"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:22.649355" level="INFO">Executing JavaScript:
+document.querySelector('#continue-payment-btn').click();
+Without any arguments.</msg>
+<arg>document.querySelector('#continue-payment-btn').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-24T19:14:22.649355" elapsed="1.820590"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:18.514938" elapsed="5.955007"/>
+</kw>
+<kw name="เลือกวิธีการชำระเงิน">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>วิธีการชำระเงิน</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:24.471335" elapsed="0.052668"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:24.524003" level="INFO">Clicking element 'xpath=//*[@id="payment-options"]/div[1]'.</msg>
+<arg>xpath=//*[@id="payment-options"]/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:24.524003" elapsed="0.113144"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>จ่ายผ่านบัตรเครดิต</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:24.637147" elapsed="0.022398"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-24T19:14:34.659635" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-24T19:14:24.659545" elapsed="10.000090"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:24.471335" elapsed="10.188300"/>
+</kw>
+<kw name="ตรวจสอบรายละเอียดสินค้าและคะแนนAll Member ที่ได้รับ และกดสั่งซื้อ">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>อภิชัย ไพจิตร</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:34.660654" elapsed="0.015813"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>0968369943</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:34.676467" elapsed="0.019302"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>136/138</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:34.695769" elapsed="0.019988"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>บางพลีใหญ่ บางพลี สมุทรปราการ 10540</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:34.715757" elapsed="0.018691"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>โค้กไม่มีน้ำตาล 1.25ลิตร (แพ็ก 6 ขวด)</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:34.734448" elapsed="0.018649"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:34.754101" level="INFO">Clicking element 'css:.alert-cookie-gdpr-allonline button'.</msg>
+<msg time="2025-01-24T19:14:34.876380" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-123.png"&gt;&lt;img src="selenium-screenshot-123.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-24T19:14:34.877386" level="FAIL">Element with locator 'css:.alert-cookie-gdpr-allonline button' not found.</msg>
+<arg>css:.alert-cookie-gdpr-allonline button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-01-24T19:14:34.754101" elapsed="0.127293">Element with locator 'css:.alert-cookie-gdpr-allonline button' not found.</status>
+</kw>
+<arg>Click Element</arg>
+<arg>css:.alert-cookie-gdpr-allonline button</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-24T19:14:34.753097" elapsed="0.129320"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:34.882417" level="INFO">Executing JavaScript:
+document.querySelector('.continue-payment-btn-popup').click();
+Without any arguments.</msg>
+<arg>document.querySelector('.continue-payment-btn-popup').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-24T19:14:34.882417" elapsed="0.011005"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-24T19:14:39.895245" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-24T19:14:34.893422" elapsed="5.001823"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:34.660654" elapsed="5.234591"/>
+</kw>
+<kw name="ตรวจสอบยอดรวมสินค้าทั้งหมด">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-24T19:14:44.896437" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-24T19:14:39.896276" elapsed="5.000161"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>หมายเลขสั่งซื้อ</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-24T19:14:44.896967" elapsed="0.017681"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:39.896276" elapsed="5.018372"/>
+</kw>
+<kw name="กรอกช้อมูล Credit Card">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:44.915898" level="INFO">Typing text 'APICHAI PAIJIT' into text field 'id:cardName'.</msg>
+<arg>id:cardName</arg>
+<arg>APICHAI PAIJIT</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:44.915898" elapsed="0.190602"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:45.106500" level="INFO">Typing text '1234 5678 9123 4567' into text field 'id:cardNumber'.</msg>
+<arg>id:cardNumber</arg>
+<arg>1234 5678 9123 4567</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:45.106500" elapsed="0.192741"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:45.300246" level="INFO">Typing text '0927' into text field 'id:expiryDate'.</msg>
+<arg>id:expiryDate</arg>
+<arg>0927</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:45.300246" elapsed="0.157665"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:45.459095" level="INFO">Typing text '319' into text field 'id:cvCode'.</msg>
+<arg>id:cvCode</arg>
+<arg>319</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:45.459095" elapsed="0.123543"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:45.583644" level="INFO">Clicking element 'id:ckRemember'.</msg>
+<arg>id:ckRemember</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:45.582638" elapsed="0.098824"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-24T19:14:45.681462" level="INFO">Clicking element 'id:subFormPay'.</msg>
+<arg>id:subFormPay</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-24T19:14:45.681462" elapsed="0.133147"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-24T19:14:55.815811" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-24T19:14:45.815639" elapsed="10.000172"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:14:44.915898" elapsed="10.899913"/>
+</kw>
+<status status="PASS" start="2025-01-24T19:13:58.099194" elapsed="57.717143"/>
+</test>
+<status status="PASS" start="2025-01-24T19:13:57.737371" elapsed="58.081974"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="All Online Order Success">All Online Order Success</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
